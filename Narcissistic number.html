@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <title> 水仙花數 </title>
+    </head>
+    <body>
+        <p>水仙花數 = 三位數各數字的立方和等於該數(例如:153)，請寫程式列出所有的水仙花數。</p>
+        
+        
+       <script>
+               for(i=100; i<1000; i++){              //水仙花數是三位數
+                    var a= parseInt(i / 100);        //取出百位數 →  % 求余数 (保留整数) → parseInt() 函数可解析一个字符串，并返回一个整数。
+                    var b= parseInt(i % 100 / 10);   //取出十位數 例53 % 100 等於0.53，取餘數53，53/10 等於5，就取出十位數5            所以代入這個算數也可以求出來 i/10 % 10 
+                    var c= parseInt(i % 10);         //取出個位數
+                                   
+               
+                  if(a*a*a+b*b*b+c*c*c==i)
+                  {
+                  document.write(i+"<br>");   
+                  }
+               }
+           
+       </script>
+       
+       
+</script>
+        
+            
+            
+  
+        
+    </body>
+</html>
